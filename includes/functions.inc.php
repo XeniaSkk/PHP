@@ -154,10 +154,13 @@ function loginUser($conn,$username,$pwd) {
         session_start();
         $_SESSION["userid"] = $uidExists["userId"];
         $_SESSION["useruid"] = $uidExists["usersUid"];
+        $_SESSION["username"] = $uidExists["usersName"];
+        $_SESSION["useremail"] = $uidExists["usersEmail"];
         header("location: ../index.php?error=none");
         exit();
     }
 
 }
+
 
 ?>
